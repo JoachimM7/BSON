@@ -1,4 +1,4 @@
-// swift-tools-version:4.2
+// swift-tools-version:5.2
 
 import PackageDescription
 
@@ -15,7 +15,7 @@ let package = Package(
     targets: [
         .target(
             name: "BSON",
-            dependencies: ["NIO"]
+            dependencies: [.product(name: "NIO", package: "swift-nio")]
         ),
         .testTarget(
             name: "BSONTests",
